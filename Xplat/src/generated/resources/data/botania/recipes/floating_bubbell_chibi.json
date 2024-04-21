@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "tag": "botania:floating_flowers"
+    },
+    {
+      "item": "botania:bubbell_chibi"
+    }
+  ],
+  "result": {
+    "item": "botania:floating_bubbell_chibi"
+  }
+}

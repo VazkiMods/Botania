@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "botania",
+  "version": "${version}",
+
+  "name": "Botania",
+  "description": "Botania is a tech mod themed around natural magic",
+  "authors": [
+    "Vazkii",
+    "wiiv",
+    "williewillus",
+    "dylan4ever",
+    "Hubry",
+    "Alwinfy",
+    "artemisSystem",
+    "Falkory220"
+  ],
+  "contact": {
+    "irc": "ircs://irc.esper.net:6697/#vazkii",
+    "email": "~williewillus/violet-moon@lists.sr.ht",
+    "homepage": "https://botaniamod.net",
+    "sources": "https://github.com/VazkiiMods/Botania",
+    "issues": "https://github.com/VazkiiMods/Botania/issues"
+  },
+
+  "license": "Botania license",
+  "icon": "logo.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "vazkii.botania.fabric.FabricCommonInitializer"
+    ],
+    "client": [
+      "vazkii.botania.fabric.client.FabricClientInitializer"
+    ],
+    "fabric-gametest": [
+      "vazkii.botania.test.block.BindingTest",
+      "vazkii.botania.test.block.HopperhockTest",
+      "vazkii.botania.test.block.InterceptorTest",
+      "vazkii.botania.test.block.OpenCrateTest",
+      "vazkii.botania.test.block.ForceRelayTest",
+      "vazkii.botania.test.block.RannuncarpusTest",
+      "vazkii.botania.test.block.DandelifeonTest",
+      "vazkii.botania.test.block.TargetBlockTest",
+      "vazkii.botania.test.block.ApothecaryRecipeTest",
+      "vazkii.botania.test.block.EntropinnyumUnethicalTntDetectionTest",
+      "vazkii.botania.test.block.DrumBlockTest",
+      "vazkii.botania.test.item.AstrolabeTest",
+      "vazkii.botania.test.item.CacophoniumTest",
+      "vazkii.botania.test.item.FlowerPouchTest",
+      "vazkii.botania.test.item.LifeAggregatorTest",
+      "vazkii.botania.test.item.GrassSeedDispensingTest",
+      "vazkii.botania.test.item.SpectatorScanTest",
+      "vazkii.botania.test.item.lens.BoreLensTest",
+      "vazkii.botania.test.item.lens.EntropicWarpLensTest",
+      "vazkii.botania.test.item.lens.PaintslingerLensTest",
+      "vazkii.botania.test.item.lens.WarpForceTest"
+    ],
+    "fabric-datagen": [
+      "vazkii.botania.fabric.data.FabricDatagenInitializer"
+    ],
+    "cardinal-components-entity": [
+      "vazkii.botania.fabric.internal_caps.CCAInternalEntityComponents"
+    ],
+    "emi": [
+      "vazkii.botania.client.integration.emi.BotaniaEmiPlugin"
+    ],
+    "rei_client": [
+      "vazkii.botania.fabric.integration.rei.BotaniaREIPlugin"
+    ],
+    "jei_mod_plugin": [
+      "vazkii.botania.client.integration.jei.JEIBotaniaPlugin"
+    ]
+  },
+  "mixins": [
+    "botania_xplat.mixins.json",
+    "botania_fabric.mixins.json"
+  ],
+  "accessWidener": "botania.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=0.14",
+    "fabric-api": ">=0.83",
+    "minecraft": ">=1.20.1 <1.21",
+    "trinkets" : ">=3",
+    "patchouli": "*"
+  },
+
+  "custom": {
+    "cardinal-components": [
+      "botania:exoflame_heatable",
+      "botania:ghost_rail",
+      "botania:iitem",
+      "botania:kept_items",
+      "botania:loonium_drop",
+      "botania:narslimmus",
+      "botania:tigerseye_pacified",
+      "botania:tnt_ethical"
+    ]
+  }
+}
