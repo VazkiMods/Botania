@@ -48,6 +48,7 @@ public class NaturalSpawnerMixin {
 	}
 
 	// Jump over entity.checkSpawnRules(pos, reason) and entity.checkSpawnObstruction(pos) under Bloodlust
+	// Makes sure when guardians are valid when they spawn in so they wont glitch in an invalid block and never die.
 	@Inject(at = @At(value = "RETURN", ordinal = 1), cancellable = true, method = "isValidPositionForMob")
 	private static void bloodthirstOverride(ServerLevel world, Mob entity, double p_234974_2_, CallbackInfoReturnable<Boolean> cir) {
 		if (BloodthirstMobEffect.overrideSpawn(world, entity.blockPosition(), entity.getType().getCategory())) {
