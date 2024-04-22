@@ -61,7 +61,8 @@ public class TerraBladeItem extends ManasteelSwordItem implements LensEffectItem
 	public static void trySpawnBurst(Player player) {
 		trySpawnBurst(player, player.getAttackStrengthScale(0F));
 	}
-
+	
+	//TODO FIX
 	public static void trySpawnBurst(Player player, float attackStrength) {
 		if (!player.isSpectator()
 				&& !player.getMainHandItem().isEmpty()
