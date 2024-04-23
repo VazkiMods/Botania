@@ -165,6 +165,43 @@ public interface BotaniaAPI {
 		}
 	};
 
+	/*
+	 * CHANGES IMPLEMENTED HERE FOR ISSUE 4601
+	 * Author - Sam Russett (srussett)
+	 */
+	Tier TERRABLADE_ITEM_TIER = new Tier() {
+		@Override
+		public int getUses() {
+			return 0;
+		}
+
+		@Override
+		public float getSpeed() {
+			return 1.6;
+		}
+
+		@Override
+		public float getAttackDamageBonus() {
+			return 8;
+		}
+
+		@Override
+		public int getLevel() {
+			return 0;
+		}
+
+		@Override
+		public int getEnchantmentValue() {
+			return 0;
+		}
+
+		@NotNull
+		@Override
+		public Ingredient getRepairIngredient() {
+			return Ingredient.EMPTY;
+		}
+	};
+
 	default ArmorMaterial getManasteelArmorMaterial() {
 		return DUMMY_ARMOR_MATERIAL;
 	}
@@ -191,6 +228,14 @@ public interface BotaniaAPI {
 
 	default Tier getTerrasteelItemTier() {
 		return DUMMY_ITEM_TIER;
+	}
+
+	/*
+	 * CHANGES IMPLEMENTED HERE FOR ISSUE 4601
+	 * Author - Sam Russett (srussett)
+	 */
+	default Tier getTerrabladeItemTier() {
+		return TERRABLADE_ITEM_TIER;
 	}
 
 	default ManaNetwork getManaNetworkInstance() {
