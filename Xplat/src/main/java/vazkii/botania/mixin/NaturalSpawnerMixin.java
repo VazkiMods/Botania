@@ -37,10 +37,11 @@ public class NaturalSpawnerMixin {
 		return entity;
 	}
 
+
 	/**
 	 * Prevents spawning when near emptiness users
 	 */
-	@Inject(at = @At("HEAD"), method = "isValidPositionForMob", cancellable = true)
+	@Inject(at = @At("HEAD"), method = "isValidPositionForMob", cancellable=true)
 	private static void emptiness(ServerLevel world, Mob entity, double squaredDistance, CallbackInfoReturnable<Boolean> cir) {
 		if (EmptinessMobEffect.shouldCancel(entity)) {
 			cir.setReturnValue(false);
